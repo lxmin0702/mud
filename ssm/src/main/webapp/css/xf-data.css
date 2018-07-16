@@ -1,0 +1,35 @@
+.dateLisTable{}
+.dateLisTable{width:100%;border:solid 1px #e0e0e0;background-color: #fff;margin-bottom:12px;}
+.dateLisTable * td.rx{border-right:dotted 1px #ddd;}
+.dateLisTable thead td,.dateLisTable thead th{ color:#397dc0;border-bottom:solid 1px #ced8e0;background-color:#f4f7f9;padding:10px 12px;}
+.dateLisTable tbody td,.dateLisTable tfoot td,.dateLisTable tbody th{padding:10px 12px;border-bottom:solid 1px #f0f0f2;color:#666;border-right:none;}
+.dateLisTable tbody td input.Hauto{height: auto;}
+.dateLisTable tbody tr:nth-of-type(odd){ background:#fff;}
+.dateLisTable tbody tr:nth-of-type(even){ background:#fff;}
+.dateLisTable tbody tr:hover td{ background:#fdfbf0;}
+.dateLisTable tbody td select,.dateLisTable tbody td input{height:30px;border:solid 1px #ddd;padding:0px 10px;}
+.dateLisTable tbody td input[type=checkbox] {line-height:auto;height:auto;}
+.dateLisTable .fgxT{border-top:solid 2px #ddd;}
+.dateLisTable .bWx{border-bottom:none;}
+.dateLisTable tbody td.opt-edit{position: relative;}
+.dateLisTable tbody td.opt-edit .aXf{position: absolute;right:4px;border:solid 1px #ddd;background-color:#fff; cursor:pointer;border-radius:3px;padding:0 6px; z-index: 9; display: none;}
+.dateLisTable tbody td.opt-edit:hover .aXf{ display:inline-block;}
+.dateLisTable tbody tr:hover td.opt-edit:hover{background:#f5efc7;}
+.dateLisTable tbody td i.iconfont{font-size: 14px;}
+
+
+
+/*-------------分页--------------------*/
+.ListPage{color:#a0aab7;width:100%;}
+.ListPage i{color:#155faa;}
+.ListPage .left{float:left;}
+.ListPage .right{float:right;border:1px solid #bfc3d1;border-radius: 4px;}
+.ListPage .right li{width:54px;height:24px;line-height:24px;text-align:center;border-right:1px solid #BFC3D1;}
+.ListPage .right li{float:left;}
+.ListPage .right .last{border-right:none;}
+.ListPage .right a{color:#5b6571;}
+.ListPage span{margin-right:10px;}
+
+
+
+

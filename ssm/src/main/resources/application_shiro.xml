@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">  
+    
+    <!--第一步：直接配置一个 securityManager -->  
+  
+<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
+	<property name="realm" ref="customShiro"/>
+</bean>
+<bean id="customShiro" class="cn.com.app.service.UserProfileShiro"/>  
+<bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor" />  
+<!-- 第三步：把请求路径拦截之后的处理 -->  
+<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">  
+<!--shiro整个的处理，都由securityManger指定和决定 -->  
+<property name="securityManager" ref="securityManager" />  
+<!-- loginUrl==>如果登录成功，跳转到哪个页面，或者执行哪个请求 -->  
+<property name="loginUrl" value="/" />
+<!-- 验证通过执行的请求或者跳转 -->  
+<!-- <property name="successUrl" value="/home.jsp" /> -->  
+<!-- 验证不通过执行的请求或者跳转 -->  
+<property name="unauthorizedUrl" value="/unauthorized.jsp" />  
+<!-- 具体的拦截路径和拦截的方式和角色和权限的范围 -->  
+<property name="filterChainDefinitions">  
+<value>
+	/ = root
+	/appUser/logout = logout
+	/appUser/login = anon  
+	/statistics/** = authc
+	/source/** = authc
+	/appUser/system/validatePassword = authc
+	/appUser/system/toUpdateUser = authc
+	/appUser/system/updatePwdOnly = authc
+	/appUser/system/** = authc,roles[1]
+</value>  
+</property>  
+<property name="filters">  
+	<map>  
+		<entry key="root">  
+            <bean class="cn.com.app.filter.RootFilter" />  
+        </entry>                  
+    </map>              
+</property>   
+</bean>  
+</beans>  
