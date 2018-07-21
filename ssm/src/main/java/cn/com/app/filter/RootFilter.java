@@ -31,7 +31,9 @@ public class RootFilter extends AccessControlFilter {
 			if (subject.getPrincipal() != null){
 				/*if(path.indexOf("statistics/summary") > -1)
 					return false;*/
-				servletResponse.sendRedirect(servletRequest.getContextPath()+"/statistics/summary");
+//				servletResponse.sendRedirect(servletRequest.getContextPath()+"/statistics/summary");
+				// home page filter
+				servletResponse.sendRedirect(servletRequest.getContextPath()+"/appUser/system/queryUserList");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception

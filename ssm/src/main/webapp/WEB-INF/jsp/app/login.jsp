@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
 <meta name="description" content= " 网页描述 " />
 <meta name="keywords" content= " 关键字 " />
-<title>APP资源管理平台</title>
+<title>SSM</title>
 <link rel="stylesheet" href=""/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/xf-public.css"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/login.css">
@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body onkeydown="keyLogin();">
 	<div class="title">
-		<h1>APP资源管理平台</h1>
+		<h1>lxmin</h1>
 	</div>
 	<div class="con-bg">
 		<div class="con-bgimg"></div>
